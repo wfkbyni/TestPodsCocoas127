@@ -11,8 +11,11 @@
 #define kButtonFontSize [UIFont systemFontOfSize:18]
 #define kCancelButtonTopGap  6.0f
 
-static const CGFloat kRowHeight = 48.0f;
-static BOOL isCliked = NO;
+#define kRowHeight 48.0f
+#define ScreenWidth_NJ 375
+#define ScreenHeight_NJ 1280
+#define IPHONE_SAFEAREA_BOTTOM 44
+#define iPhoneXSerious YES
 
 #import "NJActionSheet.h"
 
@@ -159,14 +162,10 @@ static BOOL isCliked = NO;
 
 + (void)showWithTitle:(NSString * _Nullable )title cancelButtonTitle:(NSString *)cancelButtonTitle   destructiveButtonTitle:(  NSString * _Nullable )destructiveButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles selectedBlock:(void (^)(NSInteger index))selectedBlock {
     
-    if (isCliked) {
-        return;
-    }
     NJActionSheet *actionSheet = [[NJActionSheet alloc] initWithTitle:title cancelButtonTitle:cancelButtonTitle destructiveButtonTitle:destructiveButtonTitle otherButtonTitles:otherButtonTitles selectedBlock:selectedBlock];
     actionSheet.selectedBLock = selectedBlock;
     [actionSheet show];
     
-    isCliked = YES;
 }
 
 #pragma mark - button actions
@@ -174,14 +173,14 @@ static BOOL isCliked = NO;
     
     self.selectedBLock ? self.selectedBLock(sender.tag) : nil;
     [self hide];
-    isCliked = NO;
+    
 }
 
 #pragma mark - gesture actions
 - (void)singleTapGestureInvoked:(UITapGestureRecognizer *)recognizer {
     
     [self hide];
-    isCliked = NO;
+
 }
 
 #pragma mark - private methods

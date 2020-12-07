@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NJActionSheet : UIView
 
+
 + (void)showWithTitle:(NSString * _Nullable )title
     cancelButtonTitle:(NSString *)cancelButtonTitle
 destructiveButtonTitle:(  NSString * _Nullable )destructiveButtonTitle
