@@ -1,0 +1,6 @@
+framework module TestPodsCocoas127 {
+  umbrella header "TestPodsCocoas127-umbrella.h"
+
+  export *
+  module * { export * }
+}

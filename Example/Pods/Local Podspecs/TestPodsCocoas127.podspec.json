@@ -1,0 +1,22 @@
+{
+  "name": "TestPodsCocoas127",
+  "version": "0.1.0",
+  "summary": "A short description of TestPodsCocoas127.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/wfkbyni/TestPodsCocoas127",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "wfkbyni": "shuyongchao@zhongruigroup.com"
+  },
+  "source": {
+    "git": "https://github.com/wfkbyni/TestPodsCocoas127.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "TestPodsCocoas127/Classes/**/*"
+}
